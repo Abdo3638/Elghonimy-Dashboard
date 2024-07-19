@@ -64,8 +64,13 @@ a {
 
 aside {
   width: 250px;
+  height: 100%;
   box-shadow: 0 0 10px #ddd;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 aside > h3 {
@@ -103,6 +108,7 @@ aside ul li a {
 aside ul li:hover a,
 aside ul li .active {
   background-color: #f6f6f6;
+  transform: translateX(10px);
 }
 
 aside ul li span {
@@ -137,6 +143,13 @@ aside ul li span {
 
 .content {
   overflow: hidden;
+  margin-left: 250px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin-left: 58px;
+  }
 }
 
 .content .head .search i {
@@ -159,6 +172,12 @@ aside ul li span {
 
 .head .search input:focus {
   width: 210px;
+}
+
+@media (max-width: 767px) {
+  .head .search input:focus {
+    width: 195px;
+  }
 }
 
 .head .search input::placeholder {
