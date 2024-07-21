@@ -100,15 +100,21 @@ aside > h3 {
   }
 }
 
+aside ul li {
+  transition: translate var(--main-transition) ease;
+}
+
+aside ul li:hover {
+  translate: 0.5rem;
+}
+
 aside ul li a {
-  transition: var(--main-transition);
   margin-bottom: 5px;
 }
 
 aside ul li:hover a,
 aside ul li .active {
   background-color: #f6f6f6;
-  transform: translateX(10px);
 }
 
 aside ul li span {
